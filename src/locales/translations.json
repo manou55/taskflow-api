@@ -1,0 +1,548 @@
+{
+  "fr": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "Commencer"
+    },
+    "hero": {
+      "title": "Gestion de Tâches Collaborative",
+      "subtitle": "Organise ton équipe, augmente la productivité, collabore en temps réel",
+      "cta_start": "Essayer Gratuitement",
+      "cta_discover": "Découvrir"
+    },
+    "stats": {
+      "users": "Utilisateurs actifs",
+      "tasks": "Tâches complétées",
+      "uptime": "Uptime garanti"
+    },
+    "features": {
+      "title": "Fonctionnalités Principales",
+      "realtime": "Temps Réel",
+      "realtime_desc": "Collaboration instantanée avec ton équipe. Chaque changement se synchronise en temps réel.",
+      "secure": "Sécurisé",
+      "secure_desc": "Chiffrement SSL, authentification JWT, conformité GDPR. Tes données sont protégées.",
+      "analytics": "Analytics",
+      "analytics_desc": "Dashboard complet avec statistiques, productivité, tendances, rapports.",
+      "integrations": "Intégrations",
+      "integrations_desc": "Slack, Microsoft Teams, Google Calendar, Zapier et bien d'autres.",
+      "mobile": "Mobile Ready",
+      "mobile_desc": "Fonctionne parfaitement sur mobile, tablet et desktop.",
+      "scalable": "Scalable",
+      "scalable_desc": "Supporte des milliers d'utilisateurs et des millions de tâches."
+    },
+    "pricing": {
+      "title": "Plans Tarifaires",
+      "free": "Free",
+      "pro": "Pro",
+      "enterprise": "Enterprise",
+      "forever": "Pour toujours",
+      "per_month": "par mois",
+      "popular": "POPULAIRE",
+      "try_free": "Essayer 14j Gratuit",
+      "contact": "Contacter",
+      "features": {
+        "members_5": "Jusqu'à 5 membres",
+        "members_50": "Jusqu'à 50 membres",
+        "members_unlimited": "Membres illimités",
+        "tasks_unlimited": "Tâches illimitées",
+        "analytics_basic": "Gestion basique",
+        "analytics_advanced": "Analytics avancée",
+        "analytics_premium": "Sécurité avancée & SSO",
+        "support_email": "Support email",
+        "support_priority": "Support prioritaire",
+        "support_phone": "Support 24/7 phone",
+        "teams_1": "1 équipe",
+        "teams_unlimited": "Équipes illimitées",
+        "api": "API access",
+        "integrations": "Intégrations custom",
+        "account_manager": "Account manager dédié",
+        "sla": "SLA garanti",
+        "onpremise": "Deploy on-premise"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "q1": "Puis-je annuler mon abonnement?",
+      "a1": "Oui, tu peux annuler à tout moment. Pas d'engagement long terme.",
+      "q2": "Y a-t-il une période d'essai?",
+      "a2": "Oui! 14 jours gratuits pour tous les plans payants.",
+      "q3": "Puis-je changer de plan?",
+      "a3": "Absolument! Change de plan n'importe quand, ajustement au prorata.",
+      "q4": "Comment contacte-t-on le support?",
+      "a4": "Support email 24/7, chat en direct pour les plans Pro+, phone pour Enterprise."
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow. Tous droits réservés.",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions"
+    }
+  },
+  "en": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "Get Started"
+    },
+    "hero": {
+      "title": "Collaborative Task Management",
+      "subtitle": "Organize your team, boost productivity, collaborate in real-time",
+      "cta_start": "Try For Free",
+      "cta_discover": "Learn More"
+    },
+    "stats": {
+      "users": "Active Users",
+      "tasks": "Tasks Completed",
+      "uptime": "Uptime Guaranteed"
+    },
+    "features": {
+      "title": "Key Features",
+      "realtime": "Real-time",
+      "realtime_desc": "Instant collaboration with your team. Every change syncs in real-time.",
+      "secure": "Secure",
+      "secure_desc": "SSL encryption, JWT authentication, GDPR compliant. Your data is protected.",
+      "analytics": "Analytics",
+      "analytics_desc": "Complete dashboard with statistics, productivity, trends, reports.",
+      "integrations": "Integrations",
+      "integrations_desc": "Slack, Microsoft Teams, Google Calendar, Zapier and more.",
+      "mobile": "Mobile Ready",
+      "mobile_desc": "Works perfectly on mobile, tablet and desktop.",
+      "scalable": "Scalable",
+      "scalable_desc": "Supports thousands of users and millions of tasks."
+    },
+    "pricing": {
+      "title": "Pricing Plans",
+      "free": "Free",
+      "pro": "Pro",
+      "enterprise": "Enterprise",
+      "forever": "Forever",
+      "per_month": "per month",
+      "popular": "POPULAR",
+      "try_free": "Try 14 Days Free",
+      "contact": "Contact Sales",
+      "features": {
+        "members_5": "Up to 5 members",
+        "members_50": "Up to 50 members",
+        "members_unlimited": "Unlimited members",
+        "tasks_unlimited": "Unlimited tasks",
+        "analytics_basic": "Basic management",
+        "analytics_advanced": "Advanced analytics",
+        "analytics_premium": "Advanced security & SSO",
+        "support_email": "Email support",
+        "support_priority": "Priority support",
+        "support_phone": "24/7 phone support",
+        "teams_1": "1 team",
+        "teams_unlimited": "Unlimited teams",
+        "api": "API access",
+        "integrations": "Custom integrations",
+        "account_manager": "Dedicated account manager",
+        "sla": "SLA guarantee",
+        "onpremise": "On-premise deployment"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Can I cancel my subscription?",
+      "a1": "Yes, you can cancel anytime. No long-term commitment.",
+      "q2": "Is there a trial period?",
+      "a2": "Yes! 14 days free for all paid plans.",
+      "q3": "Can I change plans?",
+      "a3": "Absolutely! Change plans anytime with prorated adjustments.",
+      "q4": "How do I contact support?",
+      "a4": "24/7 email support, live chat for Pro+, phone for Enterprise."
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "es": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "Comenzar"
+    },
+    "hero": {
+      "title": "Gestión Colaborativa de Tareas",
+      "subtitle": "Organiza tu equipo, aumenta la productividad, colabora en tiempo real",
+      "cta_start": "Prueba Gratis",
+      "cta_discover": "Descubre Más"
+    },
+    "stats": {
+      "users": "Usuarios Activos",
+      "tasks": "Tareas Completadas",
+      "uptime": "Disponibilidad Garantizada"
+    },
+    "features": {
+      "title": "Características Principales",
+      "realtime": "Tiempo Real",
+      "realtime_desc": "Colaboración instantánea con tu equipo. Cada cambio se sincroniza en tiempo real.",
+      "secure": "Seguro",
+      "secure_desc": "Cifrado SSL, autenticación JWT, cumplimiento GDPR. Tus datos están protegidos.",
+      "analytics": "Analytics",
+      "analytics_desc": "Panel completo con estadísticas, productividad, tendencias, informes.",
+      "integrations": "Integraciones",
+      "integrations_desc": "Slack, Microsoft Teams, Google Calendar, Zapier y más.",
+      "mobile": "Mobile Ready",
+      "mobile_desc": "Funciona perfectamente en móvil, tablet y desktop.",
+      "scalable": "Escalable",
+      "scalable_desc": "Soporta miles de usuarios y millones de tareas."
+    },
+    "pricing": {
+      "title": "Planes de Precios",
+      "free": "Gratis",
+      "pro": "Pro",
+      "enterprise": "Empresa",
+      "forever": "Para Siempre",
+      "per_month": "por mes",
+      "popular": "POPULAR",
+      "try_free": "Prueba 14 Días Gratis",
+      "contact": "Contactar Ventas",
+      "features": {
+        "members_5": "Hasta 5 miembros",
+        "members_50": "Hasta 50 miembros",
+        "members_unlimited": "Miembros ilimitados",
+        "tasks_unlimited": "Tareas ilimitadas",
+        "analytics_basic": "Gestión básica",
+        "analytics_advanced": "Analytics avanzado",
+        "analytics_premium": "Seguridad avanzada y SSO",
+        "support_email": "Soporte por email",
+        "support_priority": "Soporte prioritario",
+        "support_phone": "Soporte 24/7 por teléfono",
+        "teams_1": "1 equipo",
+        "teams_unlimited": "Equipos ilimitados",
+        "api": "Acceso API",
+        "integrations": "Integraciones personalizadas",
+        "account_manager": "Gestor de cuenta dedicado",
+        "sla": "Garantía SLA",
+        "onpremise": "Implementación local"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Puedo cancelar mi suscripción?",
+      "a1": "Sí, puedes cancelar en cualquier momento. Sin compromiso a largo plazo.",
+      "q2": "¿Hay período de prueba?",
+      "a2": "¡Sí! 14 días gratis para todos los planes pagos.",
+      "q3": "¿Puedo cambiar de plan?",
+      "a3": "¡Por supuesto! Cambia de plan en cualquier momento con ajustes prorrateados.",
+      "q4": "¿Cómo contacto con soporte?",
+      "a4": "Soporte por email 24/7, chat en vivo para Pro+, teléfono para Empresa."
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    }
+  },
+  "de": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "Jetzt starten"
+    },
+    "hero": {
+      "title": "Kollaboratives Aufgabenmanagement",
+      "subtitle": "Organisiere dein Team, steigere die Produktivität, arbeite in Echtzeit zusammen",
+      "cta_start": "Kostenlos testen",
+      "cta_discover": "Mehr erfahren"
+    },
+    "stats": {
+      "users": "Aktive Benutzer",
+      "tasks": "Abgeschlossene Aufgaben",
+      "uptime": "Verfügbarkeit garantiert"
+    },
+    "features": {
+      "title": "Hauptmerkmale",
+      "realtime": "Echtzeit",
+      "realtime_desc": "Sofortige Zusammenarbeit mit deinem Team. Jede Änderung wird in Echtzeit synchronisiert.",
+      "secure": "Sicher",
+      "secure_desc": "SSL-Verschlüsselung, JWT-Authentifizierung, GDPR-konform. Deine Daten sind geschützt.",
+      "analytics": "Analytik",
+      "analytics_desc": "Vollständiges Dashboard mit Statistiken, Produktivität, Trends, Berichten.",
+      "integrations": "Integrationen",
+      "integrations_desc": "Slack, Microsoft Teams, Google Calendar, Zapier und mehr.",
+      "mobile": "Mobile-freundlich",
+      "mobile_desc": "Funktioniert perfekt auf Mobilgeräten, Tablets und Desktops.",
+      "scalable": "Skalierbar",
+      "scalable_desc": "Unterstützt Tausende von Benutzern und Millionen von Aufgaben."
+    },
+    "pricing": {
+      "title": "Preispläne",
+      "free": "Kostenlos",
+      "pro": "Pro",
+      "enterprise": "Unternehmen",
+      "forever": "Für immer",
+      "per_month": "pro Monat",
+      "popular": "BELIEBT",
+      "try_free": "14 Tage kostenlos testen",
+      "contact": "Vertrieb kontaktieren",
+      "features": {
+        "members_5": "Bis zu 5 Mitglieder",
+        "members_50": "Bis zu 50 Mitglieder",
+        "members_unlimited": "Unbegrenzte Mitglieder",
+        "tasks_unlimited": "Unbegrenzte Aufgaben",
+        "analytics_basic": "Grundlegende Verwaltung",
+        "analytics_advanced": "Erweiterte Analytik",
+        "analytics_premium": "Erweiterte Sicherheit und SSO",
+        "support_email": "E-Mail-Support",
+        "support_priority": "Prioritäts-Support",
+        "support_phone": "24/7 Telefon-Support",
+        "teams_1": "1 Team",
+        "teams_unlimited": "Unbegrenzte Teams",
+        "api": "API-Zugriff",
+        "integrations": "Benutzerdefinierte Integrationen",
+        "account_manager": "Dedizierter Kontomanager",
+        "sla": "SLA-Garantie",
+        "onpremise": "On-Premise-Bereitstellung"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Kann ich mein Abonnement kündigen?",
+      "a1": "Ja, du kannst jederzeit kündigen. Keine langfristige Verpflichtung.",
+      "q2": "Gibt es einen Testzeitraum?",
+      "a2": "Ja! 14 Tage kostenlos für alle bezahlten Pläne.",
+      "q3": "Kann ich den Plan wechseln?",
+      "a3": "Absolut! Wechseln Sie jederzeit mit anteiliger Anpassung.",
+      "q4": "Wie kontaktiere ich den Support?",
+      "a4": "24/7 E-Mail-Support, Live-Chat für Pro+, Telefon für Unternehmen."
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow. Alle Rechte vorbehalten.",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen"
+    }
+  },
+  "pt": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "Começar"
+    },
+    "hero": {
+      "title": "Gerenciamento Colaborativo de Tarefas",
+      "subtitle": "Organize seu time, aumente a produtividade, colabore em tempo real",
+      "cta_start": "Teste Grátis",
+      "cta_discover": "Saiba Mais"
+    },
+    "stats": {
+      "users": "Usuários Ativos",
+      "tasks": "Tarefas Concluídas",
+      "uptime": "Disponibilidade Garantida"
+    },
+    "features": {
+      "title": "Principais Recursos",
+      "realtime": "Tempo Real",
+      "realtime_desc": "Colaboração instantânea com seu time. Cada alteração é sincronizada em tempo real.",
+      "secure": "Seguro",
+      "secure_desc": "Criptografia SSL, autenticação JWT, conformidade GDPR. Seus dados estão protegidos.",
+      "analytics": "Análise",
+      "analytics_desc": "Painel completo com estatísticas, produtividade, tendências, relatórios.",
+      "integrations": "Integrações",
+      "integrations_desc": "Slack, Microsoft Teams, Google Calendar, Zapier e muito mais.",
+      "mobile": "Pronto para Celular",
+      "mobile_desc": "Funciona perfeitamente em celular, tablet e desktop.",
+      "scalable": "Escalável",
+      "scalable_desc": "Suporta milhares de usuários e milhões de tarefas."
+    },
+    "pricing": {
+      "title": "Planos de Preços",
+      "free": "Gratuito",
+      "pro": "Pro",
+      "enterprise": "Empresa",
+      "forever": "Para Sempre",
+      "per_month": "por mês",
+      "popular": "POPULAR",
+      "try_free": "Teste 14 Dias Grátis",
+      "contact": "Contatar Vendas",
+      "features": {
+        "members_5": "Até 5 membros",
+        "members_50": "Até 50 membros",
+        "members_unlimited": "Membros ilimitados",
+        "tasks_unlimited": "Tarefas ilimitadas",
+        "analytics_basic": "Gerenciamento básico",
+        "analytics_advanced": "Análise avançada",
+        "analytics_premium": "Segurança avançada e SSO",
+        "support_email": "Suporte por email",
+        "support_priority": "Suporte prioritário",
+        "support_phone": "Suporte telefônico 24/7",
+        "teams_1": "1 time",
+        "teams_unlimited": "Times ilimitados",
+        "api": "Acesso à API",
+        "integrations": "Integrações personalizadas",
+        "account_manager": "Gerente de conta dedicado",
+        "sla": "Garantia de SLA",
+        "onpremise": "Implantação local"
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": "Posso cancelar minha assinatura?",
+      "a1": "Sim, você pode cancelar a qualquer momento. Sem compromisso de longo prazo.",
+      "q2": "Há período de avaliação?",
+      "a2": "Sim! 14 dias grátis para todos os planos pagos.",
+      "q3": "Posso trocar de plano?",
+      "a3": "Claro! Mude de plano a qualquer momento com ajuste proporcional.",
+      "q4": "Como faço para contatar o suporte?",
+      "a4": "Suporte por email 24/7, bate-papo ao vivo para Pro+, telefone para Empresa."
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow. Todos os direitos reservados.",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço"
+    }
+  },
+  "ja": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "今すぐ始める"
+    },
+    "hero": {
+      "title": "協調的なタスク管理",
+      "subtitle": "チームを整理し、生産性を向上させ、リアルタイムで協力します",
+      "cta_start": "無料で試す",
+      "cta_discover": "詳細はこちら"
+    },
+    "stats": {
+      "users": "アクティブユーザー",
+      "tasks": "完了したタスク",
+      "uptime": "稼働率保証"
+    },
+    "features": {
+      "title": "主な機能",
+      "realtime": "リアルタイム",
+      "realtime_desc": "チームとの瞬時の協力。すべての変更がリアルタイムで同期されます。",
+      "secure": "セキュア",
+      "secure_desc": "SSL暗号化、JWT認証、GDPR準拠。データは保護されています。",
+      "analytics": "分析",
+      "analytics_desc": "統計、生産性、トレンド、レポート付きの完全なダッシュボード。",
+      "integrations": "統合",
+      "integrations_desc": "Slack、Microsoft Teams、Google Calendar、Zapierなど。",
+      "mobile": "モバイル対応",
+      "mobile_desc": "モバイル、タブレット、デスクトップで完璧に動作します。",
+      "scalable": "スケーラブル",
+      "scalable_desc": "数千のユーザーと数百万のタスクをサポートします。"
+    },
+    "pricing": {
+      "title": "料金プラン",
+      "free": "無料",
+      "pro": "Pro",
+      "enterprise": "エンタープライズ",
+      "forever": "永遠に",
+      "per_month": "月額",
+      "popular": "人気",
+      "try_free": "14日間無料で試す",
+      "contact": "営業に連絡",
+      "features": {
+        "members_5": "最大5人のメンバー",
+        "members_50": "最大50人のメンバー",
+        "members_unlimited": "無制限のメンバー",
+        "tasks_unlimited": "無制限のタスク",
+        "analytics_basic": "基本管理",
+        "analytics_advanced": "高度な分析",
+        "analytics_premium": "高度なセキュリティとSSO",
+        "support_email": "メールサポート",
+        "support_priority": "優先サポート",
+        "support_phone": "24/7電話サポート",
+        "teams_1": "1チーム",
+        "teams_unlimited": "無制限のチーム",
+        "api": "APIアクセス",
+        "integrations": "カスタム統合",
+        "account_manager": "専任アカウントマネージャー",
+        "sla": "SLA保証",
+        "onpremise": "オンプレミスデプロイ"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "q1": "サブスクリプションをキャンセルできますか?",
+      "a1": "はい、いつでもキャンセルできます。長期的なコミットメントはありません。",
+      "q2": "試用期間はありますか?",
+      "a2": "はい!すべての有料プランで14日間無料です。",
+      "q3": "プランを変更できますか?",
+      "a3": "もちろん!いつでもプラン変更でき、按分調整されます。",
+      "q4": "サポートに連絡するにはどうすればよいですか?",
+      "a4": "24/7メールサポート、Pro+のライブチャット、エンタープライズの電話。"
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow。著作権所有。",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約"
+    }
+  },
+  "zh": {
+    "nav": {
+      "logo": "🎯 TaskFlow",
+      "start": "立即开始"
+    },
+    "hero": {
+      "title": "协作任务管理",
+      "subtitle": "组织你的团队，提高生产力，实时协作",
+      "cta_start": "免费尝试",
+      "cta_discover": "了解更多"
+    },
+    "stats": {
+      "users": "活跃用户",
+      "tasks": "已完成任务",
+      "uptime": "正常运行时间保证"
+    },
+    "features": {
+      "title": "主要功能",
+      "realtime": "实时",
+      "realtime_desc": "与你的团队即时协作。每个更改都会实时同步。",
+      "secure": "安全",
+      "secure_desc": "SSL加密、JWT认证、GDPR合规。你的数据受到保护。",
+      "analytics": "分析",
+      "analytics_desc": "具有统计、生产力、趋势、报告的完整仪表板。",
+      "integrations": "集成",
+      "integrations_desc": "Slack、Microsoft Teams、Google Calendar、Zapier等。",
+      "mobile": "移动就绪",
+      "mobile_desc": "在移动设备、平板电脑和桌面上完美运行。",
+      "scalable": "可扩展",
+      "scalable_desc": "支持数千名用户和数百万个任务。"
+    },
+    "pricing": {
+      "title": "定价计划",
+      "free": "免费",
+      "pro": "专业版",
+      "enterprise": "企业版",
+      "forever": "永久",
+      "per_month": "每月",
+      "popular": "受欢迎",
+      "try_free": "免费试用14天",
+      "contact": "联系销售",
+      "features": {
+        "members_5": "最多5个成员",
+        "members_50": "最多50个成员",
+        "members_unlimited": "无限成员",
+        "tasks_unlimited": "无限任务",
+        "analytics_basic": "基础管理",
+        "analytics_advanced": "高级分析",
+        "analytics_premium": "高级安全和SSO",
+        "support_email": "电子邮件支持",
+        "support_priority": "优先支持",
+        "support_phone": "24/7电话支持",
+        "teams_1": "1个团队",
+        "teams_unlimited": "无限团队",
+        "api": "API访问",
+        "integrations": "自定义集成",
+        "account_manager": "专属账户经理",
+        "sla": "SLA保证",
+        "onpremise": "本地部署"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "我可以取消订阅吗?",
+      "a1": "可以,你可以随时取消。没有长期承诺。",
+      "q2": "有试用期吗?",
+      "a2": "有!所有付费计划都提供14天免费试用。",
+      "q3": "我可以更改计划吗?",
+      "a3": "当然可以!随时更改计划,按比例调整。",
+      "q4": "我如何联系支持?",
+      "a4": "24/7电子邮件支持,Pro+实时聊天,企业电话支持。"
+    },
+    "footer": {
+      "copyright": "© 2024 TaskFlow。版权所有。",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    }
+  }
+}
