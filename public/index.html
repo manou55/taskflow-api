@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Gestion de Tâches Collaborative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0066ff;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0066ff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #0066ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,102,255,0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0066ff;
+            border: 2px solid #0066ff;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f7ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .features .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #0066ff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .pricing .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            border-color: #0066ff;
+            box-shadow: 0 10px 30px rgba(0,102,255,0.2);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.popular::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0066ff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            color: #0066ff;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .period {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .pricing-card li:before {
+            content: '✓ ';
+            color: #0066ff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats {
+            background: #f0f7ff;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            color: #0066ff;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">🎯 TaskFlow</div>
+            <div class="nav-buttons">
+                <a href="#pricing" class="btn btn-primary">Commencer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Gestion de Tâches Collaborative</h1>
+            <p>Organise ton équipe, augmente la productivité, collabore en temps réel</p>
+            <div class="cta-buttons">
+                <a href="#pricing" class="btn btn-primary">Essayer Gratuitement</a>
+                <a href="#features" class="btn btn-secondary">Découvrir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats container">
+        <div class="stat-item">
+            <h4>10K+</h4>
+            <p>Utilisateurs actifs</p>
+        </div>
+        <div class="stat-item">
+            <h4>1M+</h4>
+            <p>Tâches complétées</p>
+        </div>
+        <div class="stat-item">
+            <h4>99.9%</h4>
+            <p>Uptime garanti</p>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Fonctionnalités Principales</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>⚡ Temps Réel</h3>
+                    <p>Collaboration instantanée avec ton équipe. Chaque changement se synchronise en temps réel.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Sécurisé</h3>
+                    <p>Chiffrement SSL, authentification JWT, conformité GDPR. Tes données sont protégées.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Analytics</h3>
+                    <p>Dashboard complet avec statistiques, productivité, tendances, rapports.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔗 Intégrations</h3>
+                    <p>Slack, Microsoft Teams, Google Calendar, Zapier et bien d'autres.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Mobile Ready</h3>
+                    <p>Fonctionne parfaitement sur mobile, tablet et desktop.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 Scalable</h3>
+                    <p>Supporte des milliers d'utilisateurs et des millions de tâches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Plans Tarifaires</h2>
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0</div>
+                    <div class="period">Pour toujours</div>
+                    <ul>
+                        <li>Jusqu'à 5 membres</li>
+                        <li>Tâches illimitées</li>
+                        <li>Gestion basique</li>
+                        <li>Support email</li>
+                        <li>1 équipe</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Commencer</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card popular">
+                    <h3>Pro</h3>
+                    <div class="price">$9</div>
+                    <div class="period">par mois</div>
+                    <ul>
+                        <li>Jusqu'à 50 membres</li>
+                        <li>Tâches illimitées</li>
+                        <li>Analytics avancée</li>
+                        <li>Support prioritaire</li>
+                        <li>Équipes illimitées</li>
+                        <li>API access</li>
+                        <li>Intégrations custom</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Essayer 14j Gratuit</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$49+</div>
+                    <div class="period">par mois</div>
+                    <ul>
+                        <li>Membres illimités</li>
+                        <li>Tâches illimitées</li>
+                        <li>Sécurité avancée & SSO</li>
+                        <li>Account manager dédié</li>
+                        <li>Support 24/7 phone</li>
+                        <li>SLA garanti</li>
+                        <li>Deploy on-premise</li>
+                    </ul>
+                    <a href="mailto:contact@taskflow.app" class="btn btn-primary">Contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 4rem 2rem; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Questions Fréquentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <h4 style="color: #0066ff; margin-bottom: 0.5rem;">❓ Puis-je annuler mon abonnement?</h4>
+                    <p>Oui, tu peux annuler à tout moment. Pas d'engagement long terme.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <h4 style="color: #0066ff; margin-bottom: 0.5rem;">❓ Y a-t-il une période d'essai?</h4>
+                    <p>Oui! 14 jours gratuits pour tous les plans payants.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <h4 style="color: #0066ff; margin-bottom: 0.5rem;">❓ Puis-je changer de plan?</h4>
+                    <p>Absolument! Change de plan n'importe quand, ajustement au prorata.</p>
+                </div>
+                <div style="background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px;">
+                    <h4 style="color: #0066ff; margin-bottom: 0.5rem;">❓ Comment contacte-t-on le support?</h4>
+                    <p>Support email 24/7, chat en direct pour les plans Pro+, phone pour Enterprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TaskFlow. Tous droits réservés. | <a href="#" style="color: #0066ff;">Politique de Confidentialité</a> | <a href="#" style="color: #0066ff;">Conditions</a></p>
+        </div>
+    </footer>
+</body>
+</html>

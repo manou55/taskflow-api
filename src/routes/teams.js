@@ -1,4 +1,5 @@
 const express = require('express');
+const Team = require('../models/Team');
 
 const router = express.Router();
 
@@ -12,15 +13,13 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: 'Team name required' });
     }
 
-    // TODO: Implement team creation in database
-    const team = {
-      id: Math.random().toString(36).substr(2, 9),
+    const team = await Team.create({
       name,
       description,
-      createdBy: userId,
-      members: [userId],
-      createdAt: new Date()
-    };
+      createdBy: userId
+    });
+
+    await Team.addMember(team.id, userId, 'owner');
 
     res.status(201).json({ message: 'Team created', team });
   } catch (error) {
@@ -33,15 +32,40 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const userId = req.user.id;
-
-    // TODO: Implement teams retrieval from database
-    res.json({
-      message: 'Teams retrieved',
-      teams: []
-    });
+    const teams = await Team.getUserTeams(userId);
+    res.json(teams);
   } catch (error) {
     console.error('Get teams error:', error);
     res.status(500).json({ error: 'Failed to fetch teams' });
+  }
+});
+
+// Get team details
+router.get('/:teamId', async (req, res) => {
+  try {
+    const { teamId } = req.params;
+    const team = await Team.getById(teamId);
+
+    if (!team) {
+      return res.status(404).json({ error: 'Team not found' });
+    }
+
+    res.json(team);
+  } catch (error) {
+    console.error('Get team error:', error);
+    res.status(500).json({ error: 'Failed to fetch team' });
+  }
+});
+
+// Get team members
+router.get('/:teamId/members', async (req, res) => {
+  try {
+    const { teamId } = req.params;
+    const members = await Team.getMembers(teamId);
+    res.json(members);
+  } catch (error) {
+    console.error('Get members error:', error);
+    res.status(500).json({ error: 'Failed to fetch members' });
   }
 });
 
@@ -49,17 +73,29 @@ router.get('/', async (req, res) => {
 router.post('/:teamId/members', async (req, res) => {
   try {
     const { teamId } = req.params;
-    const { userId } = req.body;
+    const { userId, role } = req.body;
 
     if (!userId) {
       return res.status(400).json({ error: 'User ID required' });
     }
 
-    // TODO: Implement member addition
-    res.json({ message: 'Member added to team' });
+    const member = await Team.addMember(teamId, userId, role || 'member');
+    res.status(201).json({ message: 'Member added to team', member });
   } catch (error) {
     console.error('Add member error:', error);
     res.status(500).json({ error: 'Failed to add member' });
+  }
+});
+
+// Remove member from team
+router.delete('/:teamId/members/:userId', async (req, res) => {
+  try {
+    const { teamId, userId } = req.params;
+    await Team.removeMember(teamId, userId);
+    res.json({ message: 'Member removed from team' });
+  } catch (error) {
+    console.error('Remove member error:', error);
+    res.status(500).json({ error: 'Failed to remove member' });
   }
 });
 

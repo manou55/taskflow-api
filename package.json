@@ -1,7 +1,7 @@
 {
   "name": "taskflow-api",
   "version": "1.0.0",
-  "description": "SaaS Task Management API with Stripe Integration",
+  "description": "SaaS Task Management API with Paddle Integration",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -15,7 +15,8 @@
     "task-management",
     "saas",
     "api",
-    "collaboration"
+    "collaboration",
+    "paddle"
   ],
   "author": "TaskFlow Team",
   "license": "MIT",
@@ -25,12 +26,13 @@
     "pg": "^8.11.3",
     "jsonwebtoken": "^9.1.2",
     "bcryptjs": "^2.4.3",
-    "stripe": "^14.9.0",
     "socket.io": "^4.7.2",
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
     "joi": "^17.11.0",
-    "express-async-errors": "^3.1.1"
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.10.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
